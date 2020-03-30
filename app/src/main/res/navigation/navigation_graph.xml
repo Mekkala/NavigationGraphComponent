@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.navigationassignment.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/mainToTemp"
+            app:destination="@id/tempFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tempFragment"
+        android:name="com.example.navigationassignment.Temp"
+        android:label="fragment_temp"
+        tools:layout="@layout/fragment_temp">
+        <action
+            android:id="@+id/action_temp_to_lenght"
+            app:destination="@id/lenghtFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lenghtFragment"
+        android:name="com.example.navigationassignment.lenght"
+        android:label="fragment_lenght"
+        tools:layout="@layout/fragment_lenght" >
+        <action
+            android:id="@+id/action_lenght_to_mass"
+            app:destination="@id/massFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/massFragment"
+        android:name="com.example.navigationassignment.mass"
+        android:label="fragment_mass"
+        tools:layout="@layout/fragment_mass" />
+</navigation>
